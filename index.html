@@ -1,0 +1,182 @@
+<html>
+  
+        <style>
+title,h3,form{
+    padding:20px;
+}
+
+#pic{
+    padding:20px
+}
+
+textarea{
+    width:100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 20px;
+  outline: none;
+  opacity: 0.7;
+  margin-left:25px;
+  background:#808080;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: #ff2400;
+}
+
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background: #ff2400;
+}
+        </style>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC 3630 Scouting 🔥🔥</title>
+    
+    <img src="BreckRoboLogo_Mustang.png" alt="Stampede Logo" width= "200" id="pic">
+
+
+    <body>
+      <h3> Pit Scouting </h3>
+        <form action="PitSubmit.php" method="post">
+            Team Number: <input type="text" name="TeamNumber"> <br>
+          	Drivetrain Type: <input type="text" name="DriveTrainType"> <br>
+            Auto Line:<br> 
+                    <input type="radio" name="AutoLine" value="Yes"> Yes <br>
+                    <input type="radio" name="AutoLine" value="No"> No <br>
+            Auto Switch:<br> 
+          			<input type="radio" name="AutoSwitch" value="Yes"> Yes <br>
+                    <input type="radio" name="AutoSwitch" value="No"> No <br>
+            Auto Scale:<br>
+                    <input type="radio" name="AutoScale" value="Yes"> Yes <br>
+                    <input type="radio" name="AutoScale" value="No"> No <br>
+            Can Climb:<br> 
+                    <input type="radio" name="Climb" value="Yes"> Yes <br>
+                    <input type="radio" name="Climb" value="No"> No <br>
+            Switch: <br>
+                    <input type="radio" name="Switch" value="Yes"> Yes <br>
+                    <input type="radio" name="Switch" value="No"> No <br>
+            Scale: <br>
+                    <input type="radio" name="Scale" value="Yes"> Yes <br>
+                    <input type="radio" name="Scale" value="No"> No <br>
+            Vault: <br>
+                    <input type="radio" name="Vault" value="Yes"> Yes <br>
+                    <input type="radio" name="Vault" value="No"> No <br>
+            Notes: <br>
+                   <textarea class="wideInput" name="Notes" rows="5"></textarea><br>
+            <button type="submit" value="submit">Submit</button>
+        </form><br><br><br>
+
+
+
+
+
+      <h3> Match Scouting </h3>
+        <form action="MatchSubmit.php" method="post">
+          
+            Team Number: <input type="text" name="TeamNumber"> <br>
+          	Match Number: <input type="text" name="MatchNumber"> <br><br><br>
+            <b> Auto </b><br>
+            
+            Cross Auto Line:<br>
+                    <input type="radio" name="CrossLine" value="Yes"> Yes <br>
+                    <input type="radio" name="CrossLine" value="No"> No <br> <br> <br>
+            
+            Auto Switch: <br> <br>
+            <input type="range" name="autoSwitch" id="autoSwitchSlider" class="slider" value="0" min="0" max="20"   oninput="aSwitchSlider.value=autoSwitchSlider.value">      
+            <output id="aSwitchSlider">0</output> <br> <br>
+            
+            Auto Scale:<br> <br>
+            <input type="range" name="autoScale" id="autoScaleSlider" class="slider" value="0" min="0" max="20" oninput="aScaleSlider.value = autoScaleSlider.value">
+            <output id="aScaleSlider">0</output> <br> <br> <br>
+            
+          <b> Teleop </b><br>
+           
+            Switch:<br><br>
+           	<input type="range" name="switch" id="switchSlider" class="slider" value="0" min="0" max="20" oninput="swSlider.value = switchSlider.value">
+            <output id="swSlider">0</output> <br> <br> <br>
+            
+            Scale:<br><br>
+			<input type="range" name="scale" id="scaleSlider" class="slider" value="0" min="0" max="20" oninput="scSlider.value = scaleSlider.value">
+            <output id="scSlider">0</output> <br> <br> <br>
+            
+            Vault: <br><br>
+            <input type="range" name="vault" id="vaultSlider" class="slider" value="0" min="0" max="20" oninput="vSlider.value = vaultSlider.value">
+            <output id="vSlider">0</output> <br> <br> <br>
+            
+            <b> Endgame </b><br>
+            Park: <br>
+                    <input type="radio" name="Park" value="Yes"> Yes <br>
+                    <input type="radio" name="Park" value="No"> No <br>
+            Climb: <br>
+                    <input type="radio" name="Climb" value="Yes"> Yes <br>
+                    <input type="radio" name="Climb" value="No"> No <br><br>
+            Win/Lose:<br>
+                    <input type="radio" name="WinLose" value="W"> Win <br>
+                    <input type="radio" name="WinLose" value="L"> Lose <br>
+            Notes: <br>
+                   <textarea class="wideInput" name="Notes" rows="5" cols="150"></textarea><br>
+            <button type="submit" value="submit">Submit</button><br>
+        </form><br><br>
+        
+      
+      <h3> Data Search </h3>
+
+	        <div class="displaydetails">
+	            <form action="SearchTeam.php" method="post">
+		            <table>
+                        <tr>
+                            <td style="font-family:'Times New Roman'"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Team Number: <input name="TeamNumber" id="TeamNumber" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Submit">
+                            </td>
+                        </tr>
+                    </table>
+	            </form>
+        </div>
+        
+        <form action="MatchView.php" method="post">
+            <table>
+                <tr>
+                    <td style="font-family:'Times New Roman'"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Match Number: <input name="MatchData" id="MatchData" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

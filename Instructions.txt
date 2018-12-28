@@ -1,0 +1,9 @@
+Instructions for setting up 000webhost website:
+
+1. Go to 000webhost.com
+2. Create a free account
+3. You are allowed two free databases, so I would suggest you make one for pit scouting, and the other one for match scouting
+	3a. When you're first logging into PHPMyAdmin, it may ask you for your login info. Your username and password should be what's given to you on 000webhost.
+4. For those databases, you'll need 4 things: port (always localhost), username (id*some number here*_*username you picked*), database name (whatever you picked), and your password (see username, replace password with username) in that order (see code for example).
+5. When it comes time for you to change your parameters for what you want, I CANNOT stress how important it is for you to make sure that your variable names match up in your index file, PHP scripts, and your database. This gave me so many headaches.
+6. If all goes smoothly, then when you press the submit button on your website, then you should get a message saying 'New record created successfully' or something to that end. If you get an error message, then you done messed up Aaron. If, by some chance, you get an error message, take a look at your code and try to figure it out by yourself. If you can't figure it out by yourself, go to Google. If Google can't save you, my email address is camsyta81600@gmail.com. Don't feel afraid to reach out to me.
